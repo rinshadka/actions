@@ -1,5 +1,7 @@
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - 'devl'
 
 name: RA devl web-ui Build
 
