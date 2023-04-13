@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - 'devl'
+
+name: RA web-ui Build
+
+jobs:
+  ghcr:
+    name: Docker build and push to ghcr.io
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: devl
+      - name: Docker Build
+        run: |
+          ls -ltr
