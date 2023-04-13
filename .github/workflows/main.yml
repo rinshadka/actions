@@ -1,10 +1,10 @@
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
-name: RA alpha web-ui Build
+name: RA web-ui Build
 
 jobs:
   ghcr:
