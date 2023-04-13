@@ -1,10 +1,10 @@
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - devl
   workflow_dispatch:
 
-name: RA alpha web-ui Build
+name: RA web-ui Build
 
 jobs:
   ghcr:
@@ -17,4 +17,3 @@ jobs:
       - name: Docker Build
         run: |
           ls -ltr
-          
