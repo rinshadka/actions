@@ -13,7 +13,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3   
+        uses: actions/checkout@v3
+        with:
+          ref: devl 
       - name: Docker Build
         run: |
           ls -ltr
